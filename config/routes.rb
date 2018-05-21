@@ -2,9 +2,13 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  root 'base#index'
+  root 'base#app'
 
   scope '/api' do
     resources :restaurants
   end
+
+  get '*path', to: 'application#fallback_html', constraints: lambda { |request|
+    !request.xhr? && request.format.html?
+  }
 end

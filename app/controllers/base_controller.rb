@@ -4,6 +4,10 @@
 # BASE-CONTROLLER ============================
 # ============================================
 class BaseController < ApplicationController
-  def index
+  # -----------------------------------
+  # APP -------------------------------
+  # -----------------------------------
+  def app
+    # single route for react frontend
   end
 end
