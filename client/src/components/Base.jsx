@@ -2,6 +2,10 @@
 // -----------------------------------
 import React, { Component } from 'react';
 
+// Services
+// -----------------------------------
+import { RestaurantService } from '../api';
+
 // -----------------------------------
 // CLASS->BASE -----------------------
 // -----------------------------------
@@ -16,7 +20,9 @@ export default class Base extends Component {
   // ComponentDidMount
   // -----------------------------------
   componentDidMount () {
-
+    RestaurantService.index(1).then(response => {
+      console.log(response);
+    });
   }
 
   // Fetch

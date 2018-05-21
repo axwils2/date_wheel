@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root 'base#app'
 
   scope '/api' do
-    resources :restaurants
+    scope '/:user_id' do
+      resources :restaurants
+    end
   end
 
   get '*path', to: 'application#fallback_html', constraints: lambda { |request|
