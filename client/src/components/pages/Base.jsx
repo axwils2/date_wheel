@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 // Services
 // -----------------------------------
-import { RestaurantService } from '../api';
+import { RestaurantService } from '../../api';
 
 // -----------------------------------
 // CLASS->BASE -----------------------
@@ -23,14 +23,6 @@ export default class Base extends Component {
     RestaurantService.index(1).then(response => {
       console.log(response);
     });
-  }
-
-  // Fetch
-  // -----------------------------------
-  fetch (endpoint) {
-    return window.fetch(endpoint)
-      .then(response => response.json())
-      .catch(error => console.log(error))
   }
 
   // -----------------------------------

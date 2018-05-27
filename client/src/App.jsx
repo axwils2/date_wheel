@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Components
 // -----------------------------------
-import { Base, NotFound } from "./components";
+import { Base, NotFound } from "./components/pages";
+import { Nav } from './components/nav';
 
 // -----------------------------------
 // CLASS->APP ------------------------
@@ -17,10 +18,13 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route path="/" exact component={Base} />
-          <Route component={NotFound} />
-        </Switch>
+        <div>
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Base} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
       </Router>
     );
   }
