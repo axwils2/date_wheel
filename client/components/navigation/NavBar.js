@@ -1,18 +1,18 @@
 // Dependencies
 // -----------------------------------
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { View } from "react-native";
 
 // Components
 // -----------------------------------
-import NavButton from './NavButton';
+import NavButton from "./NavButton";
 
 // Styled Components
 // -----------------------------------
 const ButtonContainer = styled.View`
   position: absolute;
-  bottom: 40px;
+  bottom: 80px;
   height: 40px;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -27,8 +27,8 @@ const ButtonContainer = styled.View`
 // -----------------------------------
 const NavBar = () => (
   <ButtonContainer>
-    <NavButton path="/restaurants" name="restaurants" />
-    <NavButton path="/" name="home" />
+    <NavButton path="/" icon="home" title="home" />
+    <NavButton path="/restaurants" icon="list-ul" title="restaurants" />
   </ButtonContainer>
 );
 
